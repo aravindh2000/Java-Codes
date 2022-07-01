@@ -1,0 +1,30 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int[] p={100, 180, 260, 310,
+                    40, 535, 695 };
+                    int prev=0,val=p[0],pick=0;
+                    for(int i=1;i<p.length;i++)
+
+{
+        if(p[i]>val&&p[i]>prev)
+        {   if(i==p.length-1&&p[i]>val&&p[i]>prev)
+        {
+             System.out.println(pick+","+(i)+" profit : "+(p[i]-pick));
+             break;
+            
+        }
+            prev=p[i];
+            continue;
+        }
+        else{
+          
+            System.out.println(pick+","+(i-1)+" profit : "+(p[i]-pick));
+            pick=i;
+            prev=0;
+            val=p[i];
+            
+            
+        }
+}                    
+    }
+}
